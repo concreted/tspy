@@ -1,4 +1,4 @@
-tsp
+tspy
 ===
 
 traveling salesman in python

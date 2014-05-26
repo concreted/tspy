@@ -40,7 +40,7 @@ def B(start, X, end, graph):
 # Main TSP function
 def TSP(num_nodes, graph):
     # C: set of all nodes
-    C = set([i for i in range(num_nodes)])
+    C = set(range(num_nodes))
     
     return min([B(0, C.difference(set([0,t])), t, graph) + graph[t][0] for t in C.difference(set([0]))])
 

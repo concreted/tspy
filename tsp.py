@@ -42,8 +42,6 @@ def TSP(num_nodes, graph):
     # C: set of all nodes
     C = set([i for i in range(num_nodes)])
     
-    #best_paths = [B(0, C.difference(set([0,t])), t, graph) for t in C.difference(set([0]))]
-    #print best_paths
     return min([B(0, C.difference(set([0,t])), t, graph) + graph[t][0] for t in C.difference(set([0]))])
 
 def main():

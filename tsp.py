@@ -7,8 +7,14 @@ def distance(a, b):
     return sqrt((x-z)**2 + (y-w)**2)
 	
 def create_graph(count, points):
-    pass
-
+    graph = [ [[]] * count ] * count
+    for i in range(count):
+        p1 = points[i]
+        for j in range(count):
+            p2 = points[j]
+            graph[i][j] = distance(p1, p2)
+    return graph
+        
 # B: calculate best result for a subgraph
 def B(start, X, end, graph):
     # X: subset of C (set of all nodes)
